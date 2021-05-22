@@ -1,12 +1,15 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const tableFromArray = (array) => {
+
+
+const tableFromArray = (array, nColumns) => {
   let newArray = [];
-  for (let index = 0;index < 100; index++ ) {
-    const newCell = array[0][index].concat(',',array[1][index])
-    newArray.push(newCell);
-    //fazer um reduce com esse array p que ele me entregue uma string
+  for (let index = 0;index < array[0].length; index++ ) {
+    for (let index2 = 1; index2 < nColumns; index2++) {
+      const newCell = array[0][index].concat(',',array[index2][index])
+      newArray.push(newCell);
+    }
   }
   let textBase = 'Game Title, MetaScore\n';
   textBase = newArray.reduce((accumulator, currentValue) => accumulator + currentValue + '\n', textBase)
@@ -14,11 +17,13 @@ const tableFromArray = (array) => {
   return textBase;
 }
 
+
 (async () => {
   let gamesData = [];
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered');
+  // await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered');
 
   const result = await page.evaluate(()=>{
     let titlesFromWeb = document.querySelectorAll('a.title h3');
@@ -30,7 +35,7 @@ const tableFromArray = (array) => {
     return [titles, scores];
   })
   await browser.close();
-  const singleTable = tableFromArray(result)
+  const singleTable = tableFromArray(result,2)
   fs.writeFileSync('./tables/gamesData.csv', singleTable, 'utf-8');
 
 })();
