@@ -17,25 +17,52 @@ const tableFromArray = (array, nColumns) => {
   return textBase;
 }
 
+// por que colocar requestInfos e getInfos dentro da função evaluate? por que nao funcionam daqui?
+const requestInfos = [{
+  title: 'game title',
+  query: 'a.title h3'
+},
+{
+  title: 'metascore',
+  query: 'td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game.positive'
+}
+]
+const getInfos  = (requestInfos, queriesResults) =>{
+  requestInfos.map((info) => {
+    let infosFromWeb = document.querySelectorAll(info.query);
+    const infosList = [...infosFromWeb];
+    const infos = infosList.map(currData => currData.innerText);
+    queriesResults.push(infos);
+  })
+}
+
 
 (async () => {
-  let gamesData = [];
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered');
   // await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered');
-
+  
   const result = await page.evaluate(()=>{
-    let titlesFromWeb = document.querySelectorAll('a.title h3');
-    const titlesList = [...titlesFromWeb];
-    const titles =  titlesList.map(title => title.innerText);
-    let scoresFromWeb = document.querySelectorAll('td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game.positive');
-    const scoresList = [...scoresFromWeb];
-    const scores = scoresList.map(score => score.innerText);
-    return [titles, scores];
+    let queriesResults = [];
+    const requestInfos = [{
+      title: 'game title',
+      query: 'a.title h3'
+    },
+    {
+      title: 'metascore',
+      query: 'td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game.positive'
+    }
+    ]
+    requestInfos.map((info) => {
+      let infosFromWeb = document.querySelectorAll(info.query);
+      const infosList = [...infosFromWeb];
+      const infos = infosList.map(currData => currData.innerText);
+      queriesResults.push(infos);
+    })
+    return queriesResults;
   })
   await browser.close();
-  const singleTable = tableFromArray(result,2)
-  fs.writeFileSync('./tables/gamesData.csv', singleTable, 'utf-8');
-
+  const finalTable = tableFromArray(result,2)
+  fs.writeFileSync('./tables/gamesData.csv', finalTable, 'utf-8');
 })();
