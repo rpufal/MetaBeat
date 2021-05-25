@@ -19,15 +19,7 @@ const tableFromArray = (array, nColumns) => {
 }
 
 // por que colocar requestInfos e getInfos dentro da função evaluate? por que nao funcionam daqui?
-const requestInfos = [{
-  title: 'game title',
-  query: 'a.title h3'
-},
-{
-  title: 'metascore',
-  query: 'td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game.positive'
-}
-]
+
 const getInfos  = (requestInfos, queriesResults) =>{
   requestInfos.map((info) => {
     let infosFromWeb = document.querySelectorAll(info.query);
@@ -36,47 +28,47 @@ const getInfos  = (requestInfos, queriesResults) =>{
     queriesResults.push(infos);
   })
 }
-
+const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered',
+'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered']
 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered');
-  // await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered');
-  
-  const result = await page.evaluate(()=>{
-    let queriesResults = [];
-    const requestInfos = [{
-      title: 'game-title',
-      query: 'a.title h3'
-    },
-    {
-      title: 'metascore',
-      query: 'td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game'
-    },
-    {
-      title: 'userscore',
-      query: 'div.metascore_w.user.large.game'
-    },
-    {
-      title: 'platform',
-      query: 'div.platform'
-    },
-    {
-      title: 'release-date',
-      query: 'div.clamp-details span:not(.label):not(.data)'
-    }
-    ]
-    requestInfos.map((info) => {
-      let infosFromWeb = document.querySelectorAll(info.query);
-      const infosList = [...infosFromWeb];
-      const infos = infosList.map(currData => currData.innerText);
-      queriesResults.push(infos);
+  await pagesToVisit.map(async(currPage, listIndex) =>  {
+    await page.goto(currPage);
+    const result = await page.evaluate(()=>{
+      let queriesResults = [];
+      const requestInfos = [{
+        title: 'game-title',
+        query: 'a.title h3'
+      },
+      {
+        title: 'metascore',
+        query: 'td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game'
+      },
+      {
+        title: 'userscore',
+        query: 'div.metascore_w.user.large.game'
+      },
+      {
+        title: 'platform',
+        query: 'div.platform'
+      },
+      {
+        title: 'release-date',
+        query: 'div.clamp-details span:not(.label):not(.data)'
+      }
+      ]
+      requestInfos.map((info) => {
+        let infosFromWeb = document.querySelectorAll(info.query);
+        const infosList = [...infosFromWeb];
+        const infos = infosList.map(currData => currData.innerText);
+        queriesResults.push(infos);
+      })
+      return queriesResults;
     })
-    return queriesResults;
+    const finalTable = tableFromArray(result,result.length)
+    fs.writeFileSync(`./tables/gamesData${listIndex}.csv`, finalTable, 'utf-8');
   })
-  await browser.close();
-  const finalTable = tableFromArray(result,result.length)
-  // const finalTable = tableFromArray(result,2)
-  fs.writeFileSync('./tables/gamesData.csv', finalTable, 'utf-8');
+  await browser.close();  
 })();
