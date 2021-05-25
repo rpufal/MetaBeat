@@ -18,24 +18,17 @@ const tableFromArray = (array, nColumns) => {
   return textBase;
 }
 
-// por que colocar requestInfos e getInfos dentro da função evaluate? por que nao funcionam daqui?
 
-const getInfos  = (requestInfos, queriesResults) =>{
-  requestInfos.map((info) => {
-    let infosFromWeb = document.querySelectorAll(info.query);
-    const infosList = [...infosFromWeb];
-    const infos = infosList.map(currData => currData.innerText);
-    queriesResults.push(infos);
-  })
-}
 const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered',
-'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered']
+  'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered'];
 
-(async () => {
+
+const metacriticScrapper = async (pagesToVisit) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await pagesToVisit.map(async(currPage, listIndex) =>  {
-    await page.goto(currPage);
+  for (let index = 0; index < pagesToVisit.length; index++ ) {
+    const currentPage = pagesToVisit[index];
+    await page.goto(currentPage);
     const result = await page.evaluate(()=>{
       let queriesResults = [];
       const requestInfos = [{
@@ -58,7 +51,7 @@ const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/a
         title: 'release-date',
         query: 'div.clamp-details span:not(.label):not(.data)'
       }
-      ]
+      ];
       requestInfos.map((info) => {
         let infosFromWeb = document.querySelectorAll(info.query);
         const infosList = [...infosFromWeb];
@@ -67,8 +60,11 @@ const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/a
       })
       return queriesResults;
     })
+    console.log('ftable')
     const finalTable = tableFromArray(result,result.length)
-    fs.writeFileSync(`./tables/gamesData${listIndex}.csv`, finalTable, 'utf-8');
-  })
+    fs.writeFileSync(`./tables/gamesData${index}.csv`, finalTable, 'utf-8');
+    console.log(finalTable)
+  }
   await browser.close();  
-})();
+};
+metacriticScrapper(pagesToVisit);
