@@ -1,36 +1,70 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const tableFromArray = (array) => {
+
+
+const tableFromArray = (array, nColumns) => {
   let newArray = [];
-  for (let index = 0;index < 100; index++ ) {
-    const newCell = array[0][index].concat(',',array[1][index])
+  for (let index = 0;index < array[0].length; index++ ) {
+    let newCell = array[0][index];
+    for (let index2 = 1; index2 < nColumns; index2++) {
+      newCell = newCell.concat(',',array[index2][index])
+    }
     newArray.push(newCell);
-    //fazer um reduce com esse array p que ele me entregue uma string
   }
-  let textBase = 'Game Title, MetaScore\n';
+  let textBase = '';
   textBase = newArray.reduce((accumulator, currentValue) => accumulator + currentValue + '\n', textBase)
   console.log(textBase);
   return textBase;
 }
 
-(async () => {
-  let gamesData = [];
+
+const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered',
+  'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered'];
+
+
+const metacriticScrapper = async (pagesToVisit) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered');
-
-  const result = await page.evaluate(()=>{
-    let titlesFromWeb = document.querySelectorAll('a.title h3');
-    const titlesList = [...titlesFromWeb];
-    const titles =  titlesList.map(title => title.innerText);
-    let scoresFromWeb = document.querySelectorAll('td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game.positive');
-    const scoresList = [...scoresFromWeb];
-    const scores = scoresList.map(score => score.innerText);
-    return [titles, scores];
-  })
-  await browser.close();
-  const singleTable = tableFromArray(result)
-  fs.writeFileSync('./tables/gamesData.csv', singleTable, 'utf-8');
-
-})();
+  for (let index = 0; index < pagesToVisit.length; index++ ) {
+    const currentPage = pagesToVisit[index];
+    await page.goto(currentPage);
+    const result = await page.evaluate(()=>{
+      let queriesResults = [];
+      const requestInfos = [{
+        title: 'game-title',
+        query: 'a.title h3'
+      },
+      {
+        title: 'metascore',
+        query: 'td.clamp-summary-wrap div.clamp-score-wrap a.metascore_anchor div.metascore_w.large.game'
+      },
+      {
+        title: 'userscore',
+        query: 'div.metascore_w.user.large.game'
+      },
+      {
+        title: 'platform',
+        query: 'div.platform'
+      },
+      {
+        title: 'release-date',
+        query: 'div.clamp-details span:not(.label):not(.data)'
+      }
+      ];
+      requestInfos.map((info) => {
+        let infosFromWeb = document.querySelectorAll(info.query);
+        const infosList = [...infosFromWeb];
+        const infos = infosList.map(currData => currData.innerText);
+        queriesResults.push(infos);
+      })
+      return queriesResults;
+    })
+    console.log('ftable')
+    const finalTable = tableFromArray(result,result.length)
+    fs.writeFileSync(`./tables/gamesData${index}.csv`, finalTable, 'utf-8');
+    console.log(finalTable)
+  }
+  await browser.close();  
+};
+metacriticScrapper(pagesToVisit);
