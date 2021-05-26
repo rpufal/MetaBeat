@@ -19,15 +19,24 @@ const tableFromArray = (array, nColumns) => {
 }
 
 
-const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered',
-  'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered'];
-
+// const pagesToVisit = ['https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered',
+//   'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered'];
+const pagesToVisit = [
+  {
+    pageTitle: 'SwitchBest1',
+    url: 'https://www.metacritic.com/browse/games/score/metascore/all/switch/filtered'
+  },
+  {
+    pageTitle: 'XboxBest1',
+    url: 'https://www.metacritic.com/browse/games/score/metascore/all/xboxone/filtered'
+  }
+]
 
 const metacriticScrapper = async (pagesToVisit) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   for (let index = 0; index < pagesToVisit.length; index++ ) {
-    const currentPage = pagesToVisit[index];
+    const currentPage = pagesToVisit[index].url;
     await page.goto(currentPage);
     const result = await page.evaluate(()=>{
       let queriesResults = [];
@@ -45,25 +54,39 @@ const metacriticScrapper = async (pagesToVisit) => {
       },
       {
         title: 'platform',
-        query: 'div.platform'
+        query: 'div.platform span.data'
       },
       {
         title: 'release-date',
         query: 'div.clamp-details span:not(.label):not(.data)'
+      },
+      {
+        title: 'metacritic-website',
+        query: 'a.title'
+      },
+      {
+        title: 'thumbnail',
+        query: 'td.clamp-image-wrap a img'
       }
       ];
       requestInfos.map((info) => {
         let infosFromWeb = document.querySelectorAll(info.query);
         const infosList = [...infosFromWeb];
-        const infos = infosList.map(currData => currData.innerText);
-        queriesResults.push(infos);
+        if (info.title === 'metacritic-website') {
+          const infos = infosList.map(currData => currData.getAttribute('href'));
+          queriesResults.push(infos);
+        } else if (info.title === 'thumbnail') {
+          const infos = infosList.map(currData => currData.getAttribute('src'));
+          queriesResults.push(infos);
+        } else {
+          const infos = infosList.map(currData => currData.innerText);
+          queriesResults.push(infos);
+        }
       })
       return queriesResults;
     })
-    console.log('ftable')
     const finalTable = tableFromArray(result,result.length)
-    fs.writeFileSync(`./tables/gamesData${index}.csv`, finalTable, 'utf-8');
-    console.log(finalTable)
+    fs.writeFileSync(`./tables/${pagesToVisit[index].pageTitle}.csv`, finalTable, 'utf-8');
   }
   await browser.close();  
 };
