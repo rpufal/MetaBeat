@@ -9,7 +9,7 @@ const tableFromArray = (array, nColumns) => {
     for (let index = 0;index < array[0].length; index++ ) {
       let newCell = array[0][index];
       for (let index2 = 1; index2 < nColumns; index2++) {
-        newCell = newCell.concat(',',array[index2][index])
+        newCell = newCell.concat(';',array[index2][index])
       }
       newArray.push(newCell);
     }

@@ -1,14 +1,22 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const urlList = ['/game/playstation-5/demons-souls',
-'/game/playstation-5/tony-hawks-pro-skater-1-+-2',
-'/game/playstation-5/disco-elysium-the-final-cut'];
+
+
+readUrlFile = () => {
+  const file = fs.readFileSync('./tables_best_games/ps5/url/ps5-0-url.csv',{encoding: 'utf-8'});
+  const textArray = file.split('\n');
+  textArray.pop();
+  return textArray;
+}
+
+const urlList = readUrlFile();
+// console.log(urlList)
 
 const tableFromArray = (array) => {
   let newArray = [];
   for (let index = 0;index < array.length; index++) {
-    let newCell = array[index].concat();
+    let newCell = array[index].join(';');
     newArray.push(newCell);
   }
   console.log('novo array', newArray)
@@ -16,6 +24,8 @@ const tableFromArray = (array) => {
   textBase = newArray.reduce((accumulator, currentValue) => accumulator + currentValue + '\n', textBase)
   return textBase;
 }
+
+
 const metacriticDetailScrapper = async (pagesToVisit) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -23,6 +33,7 @@ const metacriticDetailScrapper = async (pagesToVisit) => {
   for (let listIndex = 0; listIndex < pagesToVisit.length; listIndex++ ) {
     const currentPage = `https://www.metacritic.com${pagesToVisit[listIndex]}`;
     await page.goto(currentPage);
+    await console.log(`visitou a pagina ${currentPage}`)
     const result = await page.evaluate(()=>{
       let queriesResults = [];
       const requestInfos = [{
@@ -55,7 +66,7 @@ const metacriticDetailScrapper = async (pagesToVisit) => {
       },
       {
         title: 'summary',
-        query: 'li.summary_detail.product_summary span.data span.blurb.blurb_expanded'
+        query: 'li.summary_detail.product_summary span.data span'
       },
       {
         title: 'critic_number',
@@ -68,13 +79,23 @@ const metacriticDetailScrapper = async (pagesToVisit) => {
       ];
       requestInfos.map((info) => {
         if (info.title !== 'genres') {
-          let infosFromWeb = document.querySelector(info.query).innerText;
-          queriesResults.push(infosFromWeb)
+          try {
+            let infosFromWeb = document.querySelector(info.query).innerText;
+            console.log(`puxou a info${info.title}`)
+            queriesResults.push(infosFromWeb)
+          } catch (err) {
+            console.log(err);
+          }
         } else {
-          let infosFromWeb = document.querySelectorAll(info.query);
-          const infosList = [...infosFromWeb];
-          const infos = infosList.map(currData => currData.innerText);
-          queriesResults.push(infos);
+          try {
+            let infosFromWeb = document.querySelectorAll(info.query);
+            const infosList = [...infosFromWeb];
+            const infos = infosList.map(currData => currData.innerText);
+            console.log(`puxou a info${info.title}`)
+            queriesResults.push(infos);
+          } catch (err) {
+            console.log(err);
+          }
         }
       })
       return queriesResults;
@@ -85,5 +106,7 @@ const metacriticDetailScrapper = async (pagesToVisit) => {
   fs.writeFileSync(`./tables_details/games-details.csv`, finalTable, 'utf-8');
   await browser.close();  
 };
+
+
 
 metacriticDetailScrapper(urlList);
