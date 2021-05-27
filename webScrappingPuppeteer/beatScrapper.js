@@ -87,6 +87,7 @@ const beatScrapper = async (gamesList) => {
     });
     table.push(result.join(';'));
     console.log(table);
+    await page.goto(`https://www.howlongtobeat.com/#search`);
   }
   const finalTable = tableFromArray(table);
   fs.writeFileSync(`./beatDetails/games-details.csv`, finalTable, 'utf-8');
