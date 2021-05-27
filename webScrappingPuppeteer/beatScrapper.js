@@ -22,21 +22,36 @@ const constructTable = (title,tableString) => {
   return tableString;
 };
 
-const gamesNames = ['The Legend of Zelda: Breath of the Wild']
+//read files and prepare text arrays from them
+readNameFile = (filePath) => {
+  const file = fs.readFileSync(filePath,{encoding: 'utf-8'});
+  const textArray = file.split('\n');
+  textArray.pop();
+  return textArray;
+}
+
+const gamesNames = readNameFile('./tables_best_games/ps5/ps5-0-names.csv');
+
 
 const beatScrapper = async (gamesList) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  const table = []
+  const table = [];
+  const currentPage = `https://www.howlongtobeat.com/#search`;
+  await page.goto(currentPage);
   for (let listIndex = 0; listIndex < gamesList.length; listIndex++ ) {
-    const currentPage = `https://www.howlongtobeat.com/#search`;
-    await page.goto(currentPage);
     await page.click('div[class = "search_container"]');
     await page.type('div[class = "search_container"]', gamesList[listIndex]);
     await page.keyboard.press('Enter');
-    await page.waitForSelector('div.search_list_details a.text_green');
+    try {
+      await page.waitForSelector('div.search_list_details a.text_green');
+    } catch (err) {
+      console.log(`erro, o jogo ${gamesList[listIndex]}não foi encontrado`, err);
+      await page.goto(`https://www.howlongtobeat.com/#search`);
+      continue;
+    }
     await page.click('div.search_list_details a.text_green')
-    await page.screenshot({path: 'teste_hltbeat.jpg'});
+    await page.screenshot({path: 'teste_hltb.jpg'});
     const result = await page.evaluate(()=>{
       let queriesResults = [];
       const requestInfos = [{
@@ -57,7 +72,6 @@ const beatScrapper = async (gamesList) => {
             if (info.title !== 'game-title') {
               let tableArray = infos.split('\n').map((row) => {
                 let arrayRow = row.split('\t');
-                arrayRow.splice(1,1);
                 arrayRow.splice(-2,2);
                 return arrayRow.join(';');
               })

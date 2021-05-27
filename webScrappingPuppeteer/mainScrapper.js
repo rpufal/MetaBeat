@@ -140,14 +140,16 @@ const metacriticScrapper = async (pagesToVisit, nPages) => {
         })
         return queriesResults;
       })
-      const finalTable = tableFromArray(result,result.length);
-      fs.writeFileSync(`./tables_best_games/${pagesToVisit[listIndex].pageTitle}/${pagesToVisit[listIndex].pageTitle}-${pageIndex}.csv`, finalTable, 'utf-8');
-      const urlTable = tableFromArray(result[result.length - 2],1);
-      fs.writeFileSync(`./tables_best_games/${pagesToVisit[listIndex].pageTitle}/url/${pagesToVisit[listIndex].pageTitle}-${pageIndex}-url.csv`, urlTable, 'utf-8');
+      // const finalTable = tableFromArray(result,result.length);
+      // fs.writeFileSync(`./tables_best_games/${pagesToVisit[listIndex].pageTitle}/${pagesToVisit[listIndex].pageTitle}-${pageIndex}.csv`, finalTable, 'utf-8');
+      // const urlTable = tableFromArray(result[result.length - 2],1);
+      // fs.writeFileSync(`./tables_best_games/${pagesToVisit[listIndex].pageTitle}/url/${pagesToVisit[listIndex].pageTitle}-${pageIndex}-url.csv`, urlTable, 'utf-8');
+      const nameTable = tableFromArray(result[0],1);
+      fs.writeFileSync(`./tables_best_games/${pagesToVisit[listIndex].pageTitle}/${pagesToVisit[listIndex].pageTitle}-${pageIndex}-names.csv`, nameTable, 'utf-8');
     }
   }
   await browser.close();  
 };
-metacriticScrapper(pagesToVisitCurrent, 3);
-metacriticScrapper(pagesToVisitLegacy, 3);
+// metacriticScrapper(pagesToVisitCurrent, 3);
+// metacriticScrapper(pagesToVisitLegacy, 3);
 metacriticScrapper(pagesToVisitNextGen, 1);
