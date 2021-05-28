@@ -2,17 +2,6 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 
-
-readUrlFile = () => {
-  const file = fs.readFileSync('./tables_best_games/ps5/url/ps5-0-url.csv',{encoding: 'utf-8'});
-  const textArray = file.split('\n');
-  textArray.pop();
-  return textArray;
-}
-
-const urlList = readUrlFile();
-// console.log(urlList)
-
 const tableFromArray = (array) => {
   let newArray = [];
   for (let index = 0;index < array.length; index++) {
@@ -25,15 +14,41 @@ const tableFromArray = (array) => {
   return textBase;
 }
 
+const getFiles = () => {
+  const consoles = ['wii'];
+  // const consoles = ['3ds', 'ds', 'pc', 'ps3', 'ps4','switch', 'wii', 'wiiu', 'xbox360', 'xboxone'];
+  const desiredPath = './tables_best_games/';
+  const suffix = '-url.csv';
+  const filesList = consoles.map((console) => {
+    const array = [];
+    // pegar o numero de arquivos de uma pasta e fazer o loop em cima desse numero
+    for (let index = 0; index < 3; index++) {
+      array.push(`${desiredPath}${console}/url/${console}-${index}${suffix}`)
+    };
+    return array;
+  });
+  return [].concat.apply([], filesList);
+}
 
-const metacriticDetailScrapper = async (pagesToVisit) => {
+
+readUrlFile = (fileName) => {
+  const file = fs.readFileSync(fileName,{encoding: 'utf-8'});
+  const textArray = file.split('\n');
+  textArray.pop();
+  return textArray;
+}
+
+const metacriticDetailScrapper = async (urlObject) => {
+  const pagesToVisit = urlObject.urlArray;
+  const consoleName = urlObject.consoleName;
+  const pageNumber = urlObject.pageNumber;
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   const table = []
   for (let listIndex = 0; listIndex < pagesToVisit.length; listIndex++ ) {
     const currentPage = `https://www.metacritic.com${pagesToVisit[listIndex]}`;
     await page.goto(currentPage);
-    await console.log(`visitou a pagina ${currentPage}`)
+    await console.log(`numero ${listIndex} ; visitamos a pagina ${currentPage}`)
     const result = await page.evaluate(()=>{
       let queriesResults = [];
       const requestInfos = [{
@@ -80,7 +95,7 @@ const metacriticDetailScrapper = async (pagesToVisit) => {
       requestInfos.map((info) => {
         if (info.title !== 'genres') {
           try {
-            let infosFromWeb = document.querySelector(info.query).innerText;
+            let infosFromWeb = document.querySelector(info.query).innerText.replace('\n','+');
             console.log(`puxou a info${info.title}`)
             queriesResults.push(infosFromWeb)
           } catch (err) {
@@ -103,10 +118,18 @@ const metacriticDetailScrapper = async (pagesToVisit) => {
     table.push(result);
   }
   const finalTable = tableFromArray(table);
-  fs.writeFileSync(`./tables_details/games-details.csv`, finalTable, 'utf-8');
+  fs.writeFileSync(`./tables_details/${consoleName}-${pageNumber}-details.csv`, finalTable, 'utf-8');
   await browser.close();  
 };
 
+const detailScrappingPipeline = async () => {
+  const listFiles = getFiles();
+  for (let index = 0; index < listFiles.length; index ++) {
+    const file = listFiles[index];
+    const urlArray = readUrlFile(file);
+    const urlObject = { consoleName: file.split('/')[2], urlArray, pageNumber: file.split('-')[1]};
+    await metacriticDetailScrapper(urlObject);
+  }
+}
 
-
-metacriticDetailScrapper(urlList);
+detailScrappingPipeline();
