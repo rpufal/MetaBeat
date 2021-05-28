@@ -7,22 +7,8 @@ const tableFromArray = (array) => {
   return textBase;
 }
 
-// const constructTable = (title,tableString) => {
-//   if (title !== 'game-title') {
-//     console.log('tabela')
-//     let tableArray = tableString.split('\n').map((row) => {
-//       let arrayRow = row.split('\t');
-//       arrayRow.splice(1,1);
-//       arrayRow.splice(-2,2);
-//       return arrayRow.join(';');
-//     })
-//     return tableArray.join(';');
-//   }
-//   console.log('titulo');
-//   return tableString;
-// };
 const getFiles = () => {
-  const consoles = ['wii'];
+  const consoles = ['wiiu'];
   // const consoles = ['3ds', 'ds', 'pc', 'ps3', 'ps4','switch', 'wii', 'wiiu', 'xbox360', 'xboxone'];
   const desiredPath = './tables_best_games/';
   const filesList = consoles.map((console) => {
@@ -49,9 +35,6 @@ const searchForTitle = (title) => {
   return titleArray[0]; 
 }
 
-const errorTreatment = (err) => {
-
-}
 
 const beatScrapper = async (urlObject) => {
   const namesToSearch = urlObject.urlArray;
@@ -62,7 +45,6 @@ const beatScrapper = async (urlObject) => {
   const table = [];
   const currentPage = `https://www.howlongtobeat.com/#search`;
   await page.goto(currentPage);
-
   for (let listIndex = 0; listIndex < namesToSearch.length; listIndex++ ) {
     await page.click('div[class = "search_container"]');
     const gameName = namesToSearch[listIndex];
@@ -91,48 +73,40 @@ const beatScrapper = async (urlObject) => {
       await page.goto(`https://www.howlongtobeat.com/#search`);
       continue;
     }
-    await page.screenshot({path: 'teste_hltb.jpg'});
+    //tirar o await 
+    page.screenshot({path: 'teste_hltb.jpg'});
 
     const result = await page.evaluate(()=>{
       let queriesResults = [];
-      const requestInfos = [{
-        title: 'game-title',
-        query: 'div.profile_header.shadow_text'
-      },
-      {
-        title: 'time_tables',
-        query: 'table.game_main_table'
-      }
-    ];
-
-      requestInfos.map((info) => {
-          try {
-            const infosFromWeb = document.querySelectorAll(info.query)[0];
-            console.log(`puxou a info${info.title}`);
-            let infos = infosFromWeb.innerText;
-            // const cleanedInfos = constructTable(info.title, infos);
-            if (info.title !== 'game-title') {
-              let tableArray = infos.split('\n').map((row) => {
-                let arrayRow = row.split('\t');
-                arrayRow.splice(-2,2);
-                return arrayRow.join(';');
-              })
-               infos = tableArray.join(';');
-            }
-            queriesResults.push(infos);
-            // queriesResults.push(cleanedInfos);
-          } catch (err) {
-            console.log('erro',err);
-          }
-        });
+      const requests = [
+      {query: async () => [...document.querySelectorAll('table.game_main_table')].shift().innerText},
+      {query: async () => [...document.querySelectorAll('table.game_main_table')].pop().innerText}];
+      requests.forEach(async (request) => { 
+        try {
+        const infosFromWeb = await request.query();
+        let tableArray = infosFromWeb.split('\n').map((row) => {
+          let arrayRow = row.split('\t');
+          arrayRow.splice(-2,2);
+          return arrayRow.join(';');
+        })
+        let infos = tableArray.join(';');
+        queriesResults.push(infos);
+      } catch (err) {
+        console.log('erro ao colocar info no queriesResults',err);
+      }})
       return queriesResults;
     });
+    result.unshift(gameName);
     table.push(result.join(';'));
     console.log(table);
     await page.goto(`https://www.howlongtobeat.com/#search`);
   }
   const finalTable = tableFromArray(table);
-  fs.writeFileSync(`./beatDetails/${consoleName}-${pageNumber}-hltb-details.csv`, finalTable, 'utf-8');
+  fs.writeFile(`./beatDetails/${consoleName}-${pageNumber}-hltb-details.csv`, finalTable, err => {
+    if (err) {
+      console.log(err)
+      return
+    }});
   await browser.close();  
 };
 
