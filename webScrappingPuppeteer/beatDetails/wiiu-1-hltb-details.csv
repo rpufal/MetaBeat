@@ -1,86 +1,86 @@
-Swords & Soldiers II;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Paper Monsters Recut;Single-Player;Polled;Average;Median;Main Story;1;3h 41m;3h 41m;Main + Extras;1;2h 30m;2h 30m;All PlayStyles;2;3h 05m;3h 05m
-Star Fox Guard;Single-Player;Polled;Average;Median;Main Story;20;5h 54m;5h 06m;Main + Extras;11;10h 56m;8h 15m;All PlayStyles;31;7h 41m;6h 20m
-Ultratron;Single-Player;Polled;Average;Median;Main Story;12;2h 32m;2h 27m;Main + Extras;7;5h 22m;3h 46m;Completionists;10;5h 07m;4h;All PlayStyles;29;4h 07m;3h 33m
-Another World: 20th Anniversary Edition;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-NES Remix 2;Single-Player;Polled;Average;Median;Main Story;9;6h 09m;5h 18m;Main + Extras;19;9h 26m;8h 45m;Completionists;3;15h 26m;14h 14m;All PlayStyles;31;9h 03m;8h 13m
-Kirby and the Rainbow Curse;Single-Player;Polled;Average;Median;Main Story;68;5h 39m;5h 30m;Main + Extras;36;8h 24m;7h 04m;Completionists;15;17h 21m;16h;All PlayStyles;119;7h 57m;6h 10m
-Cosmophony;Single-Player;Polled;Average;Median;Completionists;1;2h 06m;2h 06m;All PlayStyles;1;2h 06m;2h 06m
-Scribblenauts Unlimited;Single-Player;Polled;Average;Median;Main Story;170;7h 23m;7h;Main + Extras;129;10h 28m;10h;Completionists;250;13h 07m;12h;All PlayStyles;549;10h 43m;10h
-Just Dance 2016;Single-Player;Polled;Average;Median;Main Story;2;3h;3h;Main + Extras;3;24h 09m;30h 21m;All PlayStyles;5;15h 41m;10h
-Armillo;Single-Player;Polled;Average;Median;Main Story;4;5h 08m;5h 18m;Main + Extras;2;9h 30m;9h 30m;Completionists;3;17h 36m;19h 46m;All PlayStyles;9;10h 15m;9h
-Wii Fit U;Single-Player;Polled;Average;Median;Main Story;2;2h;2h;Main + Extras;1;36h;36h;Completionists;1;120h;120h;All PlayStyles;4;40h;19h
-Just Dance 2014;Single-Player;Polled;Average;Median;Main Story;7;5h 28m;6h;Main + Extras;2;11h 01m;11h 01m;Completionists;1;11h;11h;All PlayStyles;10;7h 08m;6h
-The Fall;Single-Player;Polled;Average;Median;Main Story;192;3h 25m;3h 20m;Main + Extras;61;4h 21m;4h;Completionists;41;4h 58m;4h 30m;All PlayStyles;294;3h 49m;3h 37m
+Swords & Soldiers II
+Paper Monsters Recut;Single-Player;Polled;Average;Median;Main Story;1;3h 41m;3h 41m;Main + Extras;1;2h 30m;2h 30m;All PlayStyles;2;3h 05m;3h 05m;Platform;Polled;Main;Main +;100%;Wii U;1;3h 41m;--;--;Paper Monsters Recut
+Star Fox Guard;Single-Player;Polled;Average;Median;Main Story;20;5h 54m;5h 06m;Main + Extras;11;10h 56m;8h 15m;All PlayStyles;31;7h 41m;6h 20m;Platform;Polled;Main;Main +;100%;Wii U;31;5h 54m;10h 56m;--;Star Fox Guard
+Ultratron;Single-Player;Polled;Average;Median;Main Story;12;2h 32m;2h 27m;Main + Extras;7;5h 22m;3h 46m;Completionists;10;5h 07m;4h;All PlayStyles;29;4h 07m;3h 33m;Platform;Polled;Main;Main +;100%;PC;10;3h 23m;6h 10m;8h 03m;PlayStation 3;1;--;--;5h;PlayStation 4;8;2h 52m;--;4h 36m;PlayStation Vita;6;1h 02m;3h 23m;3h 53m;Xbox One;3;1h 33m;--;--;Ultratron
+Another World: 20th Anniversary Edition;Single-Player;Polled;Average;Median;Main Story;87;2h 13m;2h;Main + Extras;16;2h 50m;2h 30m;Completionists;95;2h 34m;2h 20m;All PlayStyles;198;2h 26m;2h 18m;Platform;Polled;Main;Main +;100%;Mobile;2;2h 30m;2h 30m;--;Nintendo 3DS;5;3h 15m;--;2h 56m;Nintendo Switch;5;1h 22m;--;1h 54m;PC;95;2h 17m;2h 36m;2h 19m;PlayStation 3;5;2h 05m;--;5h 48m;PlayStation 4;49;1h 51m;3h 22m;2h 30m;PlayStation Vita;13;2h 22m;--;2h 08m;Wii U;3;3h 01m;3h 21m;--;Xbox One;21;2h 27m;--;2h 58m;Another World: 20th Anniversary
+NES Remix 2;Single-Player;Polled;Average;Median;Main Story;9;6h 09m;5h 18m;Main + Extras;19;9h 26m;8h 45m;Completionists;3;15h 26m;14h 14m;All PlayStyles;31;9h 03m;8h 13m;Platform;Polled;Main;Main +;100%;Wii U;31;6h 09m;9h 26m;15h 26m;NES Remix 2
+Kirby and the Rainbow Curse;Single-Player;Polled;Average;Median;Main Story;68;5h 39m;5h 30m;Main + Extras;36;8h 24m;7h 04m;Completionists;15;17h 21m;16h;All PlayStyles;119;7h 57m;6h 10m;Platform;Polled;Main;Main +;100%;Wii U;119;5h 39m;8h 24m;17h 21m;Kirby and the Rainbow Curse
+Cosmophony;Single-Player;Polled;Average;Median;Completionists;1;2h 06m;2h 06m;All PlayStyles;1;2h 06m;2h 06m;Platform;Polled;Main;Main +;100%;PC;1;--;--;2h 06m;Cosmophony
+Scribblenauts Unlimited
+Just Dance 2016;Single-Player;Polled;Average;Median;Main Story;2;3h;3h;Main + Extras;3;24h 09m;30h 21m;All PlayStyles;5;15h 41m;10h;Platform;Polled;Main;Main +;100%;PlayStation 4;3;3h;10h;--;Wii U;2;--;31h 13m;--;Just Dance 2016
+Armillo;Single-Player;Polled;Average;Median;Main Story;4;5h 08m;5h 18m;Main + Extras;2;9h 30m;9h 30m;Completionists;3;17h 36m;19h 46m;All PlayStyles;9;10h 15m;9h;Platform;Polled;Main;Main +;100%;PC;1;4h 13m;--;--;Wii U;8;5h 27m;9h 30m;17h 36m;Armillo
+Wii Fit U;Single-Player;Polled;Average;Median;Main Story;2;2h;2h;Main + Extras;1;36h;36h;Completionists;1;120h;120h;All PlayStyles;4;40h;19h;Platform;Polled;Main;Main +;100%;Wii U;4;2h;36h;120h;Wii Fit U
+Just Dance 2014;Single-Player;Polled;Average;Median;Main Story;7;5h 28m;6h;Main + Extras;2;11h 01m;11h 01m;Completionists;1;11h;11h;All PlayStyles;10;7h 08m;6h;Platform;Polled;Main;Main +;100%;PlayStation 4;1;6h;--;--;PlayStation 5;1;3h;--;--;Wii;3;5h;11h;11h;Wii U;2;6h;11h 02m;--;Xbox 360;2;8h;--;--;Xbox One;1;2h 19m;--;--;Just Dance 2014
+The Fall
 Unepic;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Human Resource Machine;Single-Player;Polled;Average;Median;Main Story;41;4h 01m;4h;Main + Extras;73;7h 47m;7h;Completionists;57;9h 07m;7h;All PlayStyles;171;7h 19m;5h 45m
-Resident Evil Village;Single-Player;Polled;Average;Median;Main Story;422;9h 14m;9h 21m;Main + Extras;511;11h 24m;10h 48m;Completionists;30;37h 14m;35h;All PlayStyles;963;11h 15m;10h
-NES Remix;Single-Player;Polled;Average;Median;Main Story;13;8h 06m;8h 30m;Main + Extras;21;11h 13m;10h 40m;Completionists;13;22h 12m;22h 54m;All PlayStyles;47;13h 23m;10h 57m
-Disney Infinity;Single-Player;Polled;Average;Median;Main Story;7;15h 05m;14h;Main + Extras;5;22h 14m;17h 23m;Completionists;2;26h 19m;26h 19m;All PlayStyles;14;19h 15m;17h 08m
-Scribblenauts Unmasked: A DC Comics Adventure;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Nano Assault Neo;Single-Player;Polled;Average;Median;Main Story;8;3h 39m;3h 24m;Main + Extras;2;3h 29m;3h 29m;All PlayStyles;10;3h 37m;3h 29m
-Mario vs. Donkey Kong: Tipping Stars;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Tengami;Single-Player;Polled;Average;Median;Main Story;74;1h 30m;1h 28m;Main + Extras;12;1h 40m;1h 30m;Completionists;87;1h 30m;1h 25m;All PlayStyles;173;1h 31m;1h 26m
-Puddle;Single-Player;Polled;Average;Median;Main Story;17;5h 33m;5h 30m;Main + Extras;7;7h 26m;5h 14m;Completionists;4;10h 18m;10h 34m;All PlayStyles;28;6h 42m;5h 58m
-Ninja Gaiden 3: Razor's Edge;Single-Player;Polled;Average;Median;Main Story;35;7h 11m;6h 58m;Main + Extras;11;12h 46m;10h 31m;Completionists;1;78h;78h;All PlayStyles;47;10h;7h 50m
-Star Fox Zero;Single-Player;Polled;Average;Median;Main Story;111;5h 14m;5h;Main + Extras;25;8h 33m;7h 30m;Completionists;14;21h 52m;20h 36m;All PlayStyles;150;7h 21m;5h 22m
+Human Resource Machine;Single-Player;Polled;Average;Median;Main Story;41;4h 01m;4h;Main + Extras;73;7h 47m;7h;Completionists;57;9h 07m;7h;All PlayStyles;171;7h 19m;5h 45m;Platform;Polled;Main;Main +;100%;Mobile;3;4h 32m;--;5h 35m;Nintendo Switch;17;3h 22m;7h 26m;7h 45m;PC;147;4h 03m;7h 46m;9h 29m;Wii U;4;4h 55m;11h;3h 21m;Human Resource Machine
+The Cave;Single-Player;Polled;Average;Median;Main Story;155;4h 53m;4h 25m;Main + Extras;63;7h 30m;7h;Completionists;56;14h 12m;13h 22m;All PlayStyles;274;7h 23m;5h 36m;Platform;Polled;Main;Main +;100%;Mobile;2;5h;7h;--;PC;187;4h 52m;7h 35m;14h 54m;PlayStation 3;44;4h 31m;7h 30m;11h 41m;Wii U;4;5h 33m;--;10h 33m;Xbox 360;28;6h 02m;7h 21m;13h 20m;Xbox One;4;4h 27m;5h;--;The Cave
+NES Remix;Single-Player;Polled;Average;Median;Main Story;13;8h 06m;8h 30m;Main + Extras;21;11h 13m;10h 40m;Completionists;13;22h 12m;22h 54m;All PlayStyles;47;13h 23m;10h 57m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;2;9h;--;14h 35m;Wii U;45;8h 01m;11h 13m;22h 50m;NES Remix
+Disney Infinity;Single-Player;Polled;Average;Median;Main Story;7;15h 05m;14h;Main + Extras;5;22h 14m;17h 23m;Completionists;2;26h 19m;26h 19m;All PlayStyles;14;19h 15m;17h 08m;Platform;Polled;Main;Main +;100%;PC;1;24h 56m;--;--;PlayStation 3;6;14h 54m;24h 56m;26h 11m;Wii U;4;12h;27h 03m;--;Xbox 360;3;--;17h 08m;26h 28m;Disney Infinity
+Scribblenauts Unmasked: A DC Comics Adventure;Single-Player;Polled;Average;Median;Main Story;22;6h 50m;6h 12m;Main + Extras;18;8h 49m;7h;Completionists;21;11h;11h;All PlayStyles;61;8h 51m;8h 10m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;3;9h 41m;--;--;PC;54;6h 07m;7h 36m;11h;Wii U;4;11h;14h 57m;--;Scribblenauts Unmasked: A DC Comics Adventure
+Nano Assault Neo;Single-Player;Polled;Average;Median;Main Story;8;3h 39m;3h 24m;Main + Extras;2;3h 29m;3h 29m;All PlayStyles;10;3h 37m;3h 29m;Platform;Polled;Main;Main +;100%;PlayStation 4;1;2h 35m;--;--;Wii U;8;4h 06m;3h 29m;--;Nano Assault Neo
+Mario vs. Donkey Kong: Tipping Stars;Single-Player;Polled;Average;Median;Main Story;7;3h 53m;3h 45m;Main + Extras;2;11h 41m;11h 41m;Completionists;1;16h 34m;16h 34m;All PlayStyles;10;6h 42m;3h 50m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;5;4h 36m;19h 28m;--;Wii U;5;2h 56m;3h 54m;16h 34m;Mario vs. Donkey Kong: Tipping Stars
+Tengami;Single-Player;Polled;Average;Median;Main Story;74;1h 30m;1h 28m;Main + Extras;12;1h 40m;1h 30m;Completionists;87;1h 30m;1h 25m;All PlayStyles;173;1h 31m;1h 26m;Platform;Polled;Main;Main +;100%;Mobile;8;2h 05m;3h;2h 30m;PC;144;1h 25m;1h 29m;1h 27m;Wii U;21;1h 48m;1h 36m;1h 45m;Tengami
+Puddle;Single-Player;Polled;Average;Median;Main Story;17;5h 33m;5h 30m;Main + Extras;7;7h 26m;5h 14m;Completionists;4;10h 18m;10h 34m;All PlayStyles;28;6h 42m;5h 58m;Platform;Polled;Main;Main +;100%;PC;20;5h 12m;7h 31m;11h 23m;PlayStation Vita;5;5h 49m;6h 55m;7h 04m;Wii U;2;5h 53m;--;--;Puddle
+Ninja Gaiden 3: Razor's Edge
+Star Fox Zero;Single-Player;Polled;Average;Median;Main Story;111;5h 14m;5h;Main + Extras;25;8h 33m;7h 30m;Completionists;14;21h 52m;20h 36m;All PlayStyles;150;7h 21m;5h 22m;Platform;Polled;Main;Main +;100%;Wii U;150;5h 14m;8h 33m;21h 52m;Star Fox Zero
 FIFA Soccer 13;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Squids Odyssey;Single-Player;Polled;Average;Median;Main Story;2;11h 30m;11h 30m;Main + Extras;1;28h 15m;28h 15m;All PlayStyles;3;17h 05m;12h
+Squids Odyssey;Single-Player;Polled;Average;Median;Main Story;2;11h 30m;11h 30m;Main + Extras;1;28h 15m;28h 15m;All PlayStyles;3;17h 05m;12h;Platform;Polled;Main;Main +;100%;Nintendo Switch;2;11h 30m;--;--;Squids Odyssey
 Q.U.B.E. Director's Cut;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Wii Sports Club;Single-Player;Polled;Average;Median;Main Story;7;2h 36m;3h;All PlayStyles;7;2h 36m;3h
-Fatal Frame: Maiden of Black Water;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Citizens of Earth;Single-Player;Polled;Average;Median;Main Story;14;14h 25m;14h;Main + Extras;17;23h 31m;23h;Completionists;16;33h 47m;33h 31m;All PlayStyles;47;24h 18m;23h
-Need for Speed: Underground 2;Single-Player;Polled;Average;Median;Main Story;100;19h 48m;20h;Main + Extras;62;22h 04m;21h 11m;Completionists;48;28h 26m;25h 30m;All PlayStyles;210;22h 26m;20h 02m
-Legend of Kay Anniversary;Single-Player;Polled;Average;Median;Main Story;12;12h 52m;12h;Main + Extras;14;12h 37m;12h 47m;Completionists;4;14h 49m;14h 45m;All PlayStyles;30;13h;12h 47m
-Just Dance 4;Single-Player;Polled;Average;Median;Main + Extras;2;23h 14m;23h 14m;All PlayStyles;2;23h 14m;23h 14m
-The Amazing Spider-Man (2012);Single-Player;Polled;Average;Median;Main Story;82;8h 39m;8h 25m;Main + Extras;71;13h 52m;12h 30m;Completionists;46;21h 04m;20h;All PlayStyles;199;13h 23m;12h
-Mario Party 10;Single-Player;Polled;Average;Median;Main Story;20;3h 40m;3h 01m;Main + Extras;10;13h 23m;9h 57m;Completionists;3;21h 50m;28h 55m;All PlayStyles;33;8h 16m;5h 30m
-One Piece: Unlimited World Red;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Kung Fu Rabbit;Single-Player;Polled;Average;Median;Main Story;6;3h 06m;3h;Main + Extras;4;4h 19m;4h 10m;Completionists;4;9h 34m;9h 41m;All PlayStyles;14;5h 18m;4h 10m
-Mario & Sonic at the Rio 2016 Olympic Games;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Wii Party U;Single-Player;Polled;Average;Median;Main Story;7;2h 49m;3h;All PlayStyles;7;2h 49m;3h
-Dr. Luigi;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Warriors Orochi 3 Hyper;Single-Player;Polled;Average;Median;Main Story;3;10h 05m;9h 15m;Main + Extras;1;34h 50m;34h 50m;All PlayStyles;4;16h 16m;10h 37m
-Chasing Aurora;Single-Player;Polled;Average;Median;Main Story;2;1h;1h;All PlayStyles;2;1h;1h
-Cubemen 2;Single-Player;Polled;Average;Median;Main Story;2;4h 39m;4h 39m;Main + Extras;1;7h 20m;7h 20m;All PlayStyles;3;5h 33m;5h 12m
+Wii Sports Club;Single-Player;Polled;Average;Median;Main Story;7;2h 36m;3h;All PlayStyles;7;2h 36m;3h;Platform;Polled;Main;Main +;100%;Wii U;6;2h 42m;--;--;Wii Sports Club
+Fatal Frame: Maiden of Black Water
+Citizens of Earth;Single-Player;Polled;Average;Median;Main Story;14;14h 25m;14h;Main + Extras;17;23h 31m;23h;Completionists;16;33h 47m;33h 31m;All PlayStyles;47;24h 18m;23h;Platform;Polled;Main;Main +;100%;Nintendo 3DS;12;15h 30m;22h 11m;43h 16m;PC;21;14h 23m;22h 16m;30h 48m;PlayStation 4;3;14h;33h 40m;--;PlayStation Vita;2;16h;17h;--;Wii U;9;13h 38m;24h 30m;34h 13m;Citizens of Earth
+Underground;Single-Player;Polled;Average;Median;Main Story;100;19h 48m;20h;Main + Extras;62;22h 04m;21h 11m;Completionists;48;28h 26m;25h 30m;All PlayStyles;210;22h 26m;20h 02m;Platform;Polled;Main;Main +;100%;Nintendo DS;1;--;--;25h;Nintendo GameCube;5;20h;21h 45m;30h 26m;PC;132;19h 39m;22h 10m;26h 10m;PlayStation 2;58;20h 01m;21h 50m;33h 06m;Xbox;13;20h 14m;22h 30m;28h 45m;Need for Speed: Underground 2
+Legend of Kay Anniversary;Single-Player;Polled;Average;Median;Main Story;1.6K;50h 21m;50h;Main + Extras;3.7K;99h 29m;93h 15m;Completionists;755;191h;185h;All PlayStyles;6.1K;97h 46m;83h;Platform;Polled;Main;Main +;100%;Emulated;145;43h 43m;93h 48m;160h 14m;Nintendo Switch;5.1K;50h 51m;100h 26m;192h 31m;Wii U;814;48h 18m;95h;185h 16m;The Legend of Zelda: Breath of the Wild
+Just Dance 4;Single-Player;Polled;Average;Median;Main + Extras;2;23h 14m;23h 14m;All PlayStyles;2;23h 14m;23h 14m;Platform;Polled;Main;Main +;100%;PlayStation 3;1;--;23h;--;Wii U;1;--;23h 28m;--;Just Dance 4
+The Amazing Spider-Man
+Mario Party 10;Single-Player;Polled;Average;Median;Main Story;20;3h 40m;3h 01m;Main + Extras;10;13h 23m;9h 57m;Completionists;3;21h 50m;28h 55m;All PlayStyles;33;8h 16m;5h 30m;Platform;Polled;Main;Main +;100%;Wii U;33;3h 40m;13h 23m;21h 50m;Mario Party 10
+One Piece: Unlimited World Red;Single-Player;Polled;Average;Median;Main Story;35;9h 18m;9h 17m;Main + Extras;22;24h 28m;20h;Completionists;6;67h 46m;60h 53m;All PlayStyles;63;20h 10m;12h;Platform;Polled;Main;Main +;100%;Nintendo 3DS;20;9h 38m;26h 58m;58h 56m;Nintendo Switch;4;7h 39m;12h 29m;--;PC;4;7h 52m;16h;--;PlayStation 3;15;10h 43m;25h 44m;70h 41m;PlayStation Vita;15;8h 40m;16h 22m;87h 23m;Wii U;5;10h 15m;29h 53m;60h;One Piece: Unlimited World Red
+Kung Fu Rabbit;Single-Player;Polled;Average;Median;Main Story;6;3h 06m;3h;Main + Extras;4;4h 19m;4h 10m;Completionists;4;9h 34m;9h 41m;All PlayStyles;14;5h 18m;4h 10m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;3;--;4h 33m;11h 08m;PlayStation 3;1;--;--;8h 15m;PlayStation Vita;4;3h;4h 05m;--;Wii U;4;3h 06m;--;12h 47m;Kung Fu Rabbit
+Mario & Sonic at the Rio 2016 Olympic Games;Single-Player;Polled;Average;Median;Main Story;4;5h 57m;6h;Main + Extras;3;6h 54m;6h 30m;Completionists;1;12h 35m;12h 35m;All PlayStyles;8;7h 08m;6h 45m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;4;6h 25m;7h 06m;--;Wii U;4;5h 30m;6h 30m;12h 35m;Mario & Sonic at the Rio 2016 Olympic Games
+Wii Party U;Single-Player;Polled;Average;Median;Main Story;7;2h 49m;3h;All PlayStyles;7;2h 49m;3h;Platform;Polled;Main;Main +;100%;Wii U;7;2h 49m;--;--;Wii Party U
+Dr. Luigi;Single-Player;Polled;Average;Median;Main Story;2;1h 36m;1h 36m;Main + Extras;1;14h 37m;14h 37m;All PlayStyles;3;5h 56m;2h;Platform;Polled;Main;Main +;100%;Wii U;3;1h 36m;14h 37m;--;Dr. Luigi
+Warriors Orochi 3 Hyper;Single-Player;Polled;Average;Median;Main Story;3;10h 05m;9h 15m;Main + Extras;1;34h 50m;34h 50m;All PlayStyles;4;16h 16m;10h 37m;Platform;Polled;Main;Main +;100%;Wii U;4;10h 05m;34h 50m;--;Warriors Orochi 3 Hyper
+Chasing Aurora;Single-Player;Polled;Average;Median;Main Story;2;1h;1h;All PlayStyles;2;1h;1h;Platform;Polled;Main;Main +;100%;Wii U;2;1h;--;--;Chasing Aurora
+Cubemen 2;Single-Player;Polled;Average;Median;Main Story;2;4h 39m;4h 39m;Main + Extras;1;7h 20m;7h 20m;All PlayStyles;3;5h 33m;5h 12m;Platform;Polled;Main;Main +;100%;PC;3;4h 39m;7h 20m;--;Cubemen 2
 Sonic: Lost World;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Wooden Sen'SeY;Single-Player;Polled;Average;Median;Main Story;7;2h 03m;2h 08m;Main + Extras;1;5h;5h;All PlayStyles;8;2h 25m;2h 09m
-Watch Dogs;Single-Player;Polled;Average;Median;Main Story;629;19h 29m;19h 04m;Main + Extras;568;34h 09m;32h 26m;Completionists;157;60h 48m;57h;All PlayStyles;1.4K;30h 26m;25h
-Pure Chess;Single-Player;Polled;Average;Median;Main + Extras;1;8h;8h;All PlayStyles;1;8h;8h
-F1 Race Stars;Single-Player;Polled;Average;Median;Main Story;4;11h 59m;11h 04m;Main + Extras;5;24h 47m;16h 15m;Completionists;5;23h 59m;21h;All PlayStyles;14;20h 51m;16h 45m
-Game & Wario;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
+Wooden Sen'SeY;Single-Player;Polled;Average;Median;Main Story;7;2h 03m;2h 08m;Main + Extras;1;5h;5h;All PlayStyles;8;2h 25m;2h 09m;Platform;Polled;Main;Main +;100%;PC;8;2h 03m;5h;--;Wooden Sen'SeY
+Watch Dogs;Single-Player;Polled;Average;Median;Main Story;629;19h 29m;19h 04m;Main + Extras;568;34h 09m;32h 26m;Completionists;158;60h 55m;57h;All PlayStyles;1.4K;30h 28m;25h;Platform;Polled;Main;Main +;100%;PC;736;19h 13m;34h 43m;62h 02m;PlayStation 3;57;20h 51m;35h 01m;55h 41m;PlayStation 4;352;19h 27m;31h 59m;57h 13m;PlayStation 5;5;19h 31m;41h;--;Wii U;16;20h 24m;48h 08m;104h 12m;Xbox 360;30;18h 03m;32h 46m;44h 54m;Xbox One;158;20h 27m;34h 36m;66h 35m;Xbox Series X/S;1;--;34h 43m;--;Watch Dogs
+Pure Chess;Single-Player;Polled;Average;Median;Main + Extras;1;8h;8h;All PlayStyles;1;8h;8h;Platform;Polled;Main;Main +;100%;PlayStation Vita;1;--;8h;--;Pure Chess
+F1 Race Stars: Powered Up Edition;Single-Player;Polled;Average;Median;Main Story;4;11h 59m;11h 04m;Main + Extras;5;24h 47m;16h 15m;Completionists;5;23h 59m;21h;All PlayStyles;14;20h 51m;16h 45m;Platform;Polled;Main;Main +;100%;PC;7;9h 20m;27h 03m;28h 58m;PlayStation 3;6;14h 19m;15h 42m;20h 41m;Xbox 360;1;10h;--;--;F1 Race Stars
+Game & Wario;Single-Player;Polled;Average;Median;Main Story;29;2h 01m;2h;Main + Extras;15;7h 12m;5h;Completionists;4;12h 29m;11h 54m;All PlayStyles;48;4h 30m;2h 16m;Platform;Polled;Main;Main +;100%;Wii U;48;2h 01m;7h 12m;12h 29m;Game & Wario
 SiNG Party;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-The Mysterious Cities of Gold: Secret Paths;Single-Player;Polled;Average;Median;Main + Extras;1;10h 24m;10h 24m;Completionists;1;21h 52m;21h 52m;All PlayStyles;2;16h 08m;16h 08m
-Abyss;Single-Player;Polled;Average;Median;Main Story;2;1h 42m;1h 42m;Main + Extras;1;3h 27m;3h 27m;Completionists;2;3h 29m;3h 29m;All PlayStyles;5;2h 46m;2h 20m
+The Mysterious Cities of Gold: Secret Paths;Single-Player;Polled;Average;Median;Main + Extras;1;10h 24m;10h 24m;Completionists;1;21h 52m;21h 52m;All PlayStyles;2;16h 08m;16h 08m;Platform;Polled;Main;Main +;100%;PC;2;--;10h 24m;21h 52m;The Mysterious Cities of Gold: Secret Paths
+Abyss;Single-Player;Polled;Average;Median;Main Story;2;1h 42m;1h 42m;Main + Extras;1;3h 27m;3h 27m;Completionists;2;3h 29m;3h 29m;All PlayStyles;5;2h 46m;2h 20m;Platform;Polled;Main;Main +;100%;Wii U;2;1h 42m;--;--;Abyss
 Pac-Man and the Ghostly Adventures;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Mario Tennis: Ultra Smash;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Typoman;Single-Player;Polled;Average;Median;Main Story;27;4h 01m;3h 48m;Main + Extras;15;4h 40m;4h 20m;Completionists;5;9h 06m;10h 31m;All PlayStyles;47;4h 46m;4h 15m
-Shadow Puppeteer;Single-Player;Polled;Average;Median;Main Story;7;4h 19m;3h 42m;Main + Extras;4;5h 18m;4h 21m;Completionists;4;4h 50m;3h 15m;All PlayStyles;15;4h 43m;3h 48m
+Mario Tennis: Ultra Smash;Single-Player;Polled;Average;Median;Main Story;11;5h 03m;4h 45m;Main + Extras;6;7h 27m;4h 21m;Completionists;5;9h 48m;7h 28m;All PlayStyles;22;6h 47m;5h 30m;Platform;Polled;Main;Main +;100%;Wii U;22;5h 03m;7h 27m;9h 48m;Mario Tennis: Ultra Smash
+Typoman
+Shadow Puppeteer;Single-Player;Polled;Average;Median;Main Story;7;4h 19m;3h 42m;Main + Extras;4;5h 18m;4h 21m;Completionists;4;4h 50m;3h 15m;All PlayStyles;15;4h 43m;3h 48m;Platform;Polled;Main;Main +;100%;PC;12;3h 33m;3h 44m;3h 04m;Shadow Puppeteer
 Disney Epic Mickey 2: The Power of Two;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Roving Rogue
+Roving Rogue;Roving Rogue
 Transformers Prime: The Game;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Super Toy Cars;Single-Player;Polled;Average;Median;Main Story;4;2h 18m;2h 14m;Main + Extras;1;4h 06m;4h 06m;Completionists;3;6h 18m;6h 20m;All PlayStyles;8;4h 02m;3h 48m
-How to Survive;Single-Player;Polled;Average;Median;Main Story;41;10h;9h;Main + Extras;41;14h 13m;13h;Completionists;12;37h 19m;31h 45m;All PlayStyles;94;15h 20m;11h 30m
-Cube Life: Island Survival;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Mario & Sonic at the Sochi 2014 Olympic Winter Games;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
+Super Toy Cars;Single-Player;Polled;Average;Median;Main Story;4;2h 18m;2h 14m;Main + Extras;1;4h 06m;4h 06m;Completionists;3;6h 18m;6h 20m;All PlayStyles;8;4h 02m;3h 48m;Platform;Polled;Main;Main +;100%;PC;5;2h 11m;4h 06m;6h 15m;Xbox One;3;2h 39m;--;6h 20m;Super Toy Cars
+How to Survive;Single-Player;Polled;Average;Median;Main Story;41;10h;9h;Main + Extras;41;14h 13m;13h;Completionists;12;37h 19m;31h 45m;All PlayStyles;94;15h 20m;11h 30m;Platform;Polled;Main;Main +;100%;PC;94;10h;14h 13m;37h 19m;How to Survive
+Cube Life: Island Survival;Cube Life: Island Survival
+Mario & Sonic at the Sochi 2014 Olympic Winter Games;Single-Player;Polled;Average;Median;Main + Extras;2;8h 15m;8h 15m;All PlayStyles;2;8h 15m;8h 15m;Platform;Polled;Main;Main +;100%;Wii U;2;--;8h 15m;--;Mario & Sonic at the Sochi 2014 Olympic Winter Games
 Temple of Yog;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Blok Drop U;Single-Player;Polled;Average;Median;Completionists;4;1h 04m;54m;All PlayStyles;4;1h 04m;54m
-Ice Cream Surfer;Single-Player;Polled;Average;Median;Main Story;3;49m;50m;Main + Extras;2;1h 06m;1h 06m;All PlayStyles;5;56m;1h
-Rabbids Land;Single-Player;Polled;Average;Median;Main Story;3;1h 28m;1h 26m;All PlayStyles;3;1h 28m;1h 26m
-Disney's Planes;Single-Player;Polled;Average;Median;Main Story;4;3h 58m;3h 26m;Main + Extras;1;4h 39m;4h 39m;All PlayStyles;5;4h 06m;3h 30m
-Funky Barn;Single-Player;Polled;Average;Median;Main Story;1;4h 46m;4h 46m;Completionists;1;5h 30m;5h 30m;All PlayStyles;2;5h 08m;5h 08m
-Marvel Avengers: Battle for Earth;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Pokémon Rumble World;Single-Player;Polled;Average;Median;Main Story;7;21h 24m;22h;Main + Extras;7;59h 25m;53h;Completionists;1;199h 44m;199h 44m;All PlayStyles;15;51h 01m;26h 10m
-Canvaleon;Single-Player;Polled;Average;Median;Main Story;2;8h 15m;8h 15m;Main + Extras;2;10h 30m;10h 30m;Completionists;2;12h 15m;12h 15m;All PlayStyles;6;10h 20m;10h
-Mighty No. 9;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Gravity Badgers;Single-Player;Polled;Average;Median;Main Story;3;3h;2h 57m;Main + Extras;1;3h 42m;3h 42m;Completionists;4;10h 58m;10h 56m;All PlayStyles;8;7h 04m;6h 51m
-Animal Crossing: amiibo Festival;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
+Blok Drop U;Single-Player;Polled;Average;Median;Completionists;4;1h 04m;54m;All PlayStyles;4;1h 04m;54m;Platform;Polled;Main;Main +;100%;Wii U;4;--;--;1h 04m;Blok Drop U
+Ice Cream Surfer;Single-Player;Polled;Average;Median;Main Story;3;49m;50m;Main + Extras;2;1h 06m;1h 06m;All PlayStyles;5;56m;1h;Platform;Polled;Main;Main +;100%;PlayStation 4;2;50m;1h;--;PlayStation Vita;2;49m;--;--;Ice Cream Surfer
+Rabbids Land;Single-Player;Polled;Average;Median;Main Story;3;1h 28m;1h 26m;All PlayStyles;3;1h 28m;1h 26m;Platform;Polled;Main;Main +;100%;Wii U;3;1h 28m;--;--;Rabbids Land
+Disney Planes;Single-Player;Polled;Average;Median;Main Story;4;3h 58m;3h 26m;Main + Extras;1;4h 39m;4h 39m;All PlayStyles;5;4h 06m;3h 30m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;2;2h 02m;4h 39m;--;PC;2;5h 15m;--;--;Wii U;1;3h 23m;--;--;Disney's Planes
+Funky Barn;Single-Player;Polled;Average;Median;Main Story;1;4h 46m;4h 46m;Completionists;1;5h 30m;5h 30m;All PlayStyles;2;5h 08m;5h 08m;Platform;Polled;Main;Main +;100%;Wii U;2;4h 46m;--;5h 30m;Funky Barn
+Marvel Avengers: Battle for Earth;Single-Player;Polled;Average;Median;Main Story;4;2h 04m;2h 15m;Main + Extras;2;3h 43m;3h 43m;All PlayStyles;6;2h 37m;2h 15m;Platform;Polled;Main;Main +;100%;Wii U;2;2h 45m;--;--;Xbox 360;4;1h 24m;3h 43m;--;Marvel Avengers: Battle for Earth
+Pokemon Rumble U;Single-Player;Polled;Average;Median;Main Story;3;4h 45m;5h 15m;Completionists;1;5h;5h;All PlayStyles;4;4h 48m;5h 07m;Platform;Polled;Main;Main +;100%;Wii U;4;4h 45m;--;5h;Pokémon Rumble U
+Canvaleon;Single-Player;Polled;Average;Median;Main Story;2;8h 15m;8h 15m;Main + Extras;2;10h 30m;10h 30m;Completionists;2;12h 15m;12h 15m;All PlayStyles;6;10h 20m;10h;Platform;Polled;Main;Main +;100%;Wii U;6;8h 15m;10h 30m;12h 15m;Canvaleon
+Mighty No. 9;Single-Player;Polled;Average;Median;Main Story;79;5h 07m;4h 33m;Main + Extras;26;8h 29m;8h 39m;Completionists;2;12h 28m;12h 28m;All PlayStyles;107;6h 05m;5h 05m;Platform;Polled;Main;Main +;100%;PC;55;5h 22m;7h 55m;15h 56m;PlayStation 3;1;3h 54m;--;--;PlayStation 4;33;5h 03m;8h 26m;9h 01m;Wii U;13;5h 04m;17h 51m;--;Xbox One;5;3h 51m;10h 11m;--;Mighty No. 9
+Gravity Badgers;Single-Player;Polled;Average;Median;Main Story;3;3h;2h 57m;Main + Extras;1;3h 42m;3h 42m;Completionists;4;10h 58m;10h 56m;All PlayStyles;8;7h 04m;6h 51m;Platform;Polled;Main;Main +;100%;PC;7;2h 55m;3h 42m;10h 58m;Wii U;1;3h 12m;--;--;Gravity Badgers
+Animal Crossing: amiibo Festival;Single-Player;Polled;Average;Median;Main Story;5;7h 38m;7h;Main + Extras;2;19h 50m;19h 50m;Completionists;2;26h 56m;26h 56m;All PlayStyles;9;14h 38m;10h;Platform;Polled;Main;Main +;100%;Wii U;9;7h 38m;19h 50m;26h 56m;Animal Crossing: Amiibo Festival
 Tank! Tank! Tank!;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Rodea the Sky Soldier;Single-Player;Polled;Average;Median;Main Story;13;7h 57m;7h 49m;Main + Extras;5;12h 40m;11h 16m;All PlayStyles;18;9h 15m;8h 37m
+Rodea the Sky Soldier;Single-Player;Polled;Average;Median;Main Story;13;7h 57m;7h 49m;Main + Extras;5;12h 40m;11h 16m;All PlayStyles;18;9h 15m;8h 37m;Platform;Polled;Main;Main +;100%;Wii;13;7h 06m;12h 37m;--;Wii U;5;9h 50m;12h 51m;--;Rodea the Sky Soldier
 Devil's Third;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Ben 10: Omniverse;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Adventure Time: Explore the Dungeon Because I DON'T KNOW!;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-Sonic Boom: Rise of Lyric;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
-ESPN Sports Connection;Single-Player;Polled;Average;Median;Main Story;1;1h 32m;1h 32m;All PlayStyles;1;1h 32m;1h 32m
-Game Party Champions;Platform;Polled;Main;Main +;100%;Not enough data.;;;;
+Ben 10: Omniverse;Single-Player;Polled;Average;Median;Main Story;5;5h 35m;5h;Main + Extras;3;5h 45m;5h 30m;Completionists;1;9h;9h;All PlayStyles;9;6h 01m;5h 30m;Platform;Polled;Main;Main +;100%;Nintendo 3DS;2;2h 11m;3h 45m;--;PlayStation 3;6;7h;6h 45m;9h;Wii;1;4h 45m;--;--;Ben 10: Omniverse
+Adventure Time: Explore the Dungeon Because I DON'T KNOW!;Single-Player;Polled;Average;Median;Main Story;6;9h 21m;9h 15m;Main + Extras;1;7h;7h;All PlayStyles;7;9h 01m;8h 30m;Platform;Polled;Main;Main +;100%;PC;2;7h;7h;--;PlayStation 3;3;11h 12m;--;--;Wii U;1;8h 30m;--;--;Xbox 360;1;7h;--;--;Adventure Time: Explore the Dungeon Because I Don't Know!
+Sonic Boom: Rise of Lyric;Single-Player;Polled;Average;Median;Main Story;9;8h 22m;8h 07m;Main + Extras;4;10h 55m;9h 41m;Completionists;3;20h 44m;14h;All PlayStyles;16;11h 19m;8h 51m;Platform;Polled;Main;Main +;100%;Wii U;16;8h 22m;10h 55m;20h 44m;Sonic Boom: Rise of Lyric
+ESPN Sports Connection;Single-Player;Polled;Average;Median;Main Story;1;1h 32m;1h 32m;All PlayStyles;1;1h 32m;1h 32m;Platform;Polled;Main;Main +;100%;Wii U;1;1h 32m;--;--;ESPN Sports Connection
+Game Party Champions;Platform;Polled;Main;Main +;100%;Not enough data.;;;;;Platform;Polled;Main;Main +;100%;Not enough data.;;;;;Game Party Champions
 Family Party: 30 Great Games Obstacle Arcade;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null;null
