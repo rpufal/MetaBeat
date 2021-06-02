@@ -22,7 +22,7 @@ const getFiles = () => {
   const filesList = consoles.map((console) => {
     const array = [];
     // pegar o numero de arquivos de uma pasta e fazer o loop em cima desse numero
-    for (let index = 2; index < 3; index++) {
+    for (let index = 0; index < 3; index++) {
       array.push(`${desiredPath}${console}/url/${console}-${index}${suffix}`)
     };
     return array;
@@ -65,7 +65,7 @@ const metacriticDetailScrapper = async (urlObject) => {
       },
       {
         title: 'platform',
-        query: 'span.platform a'
+        query: 'span.platform'
       },
       {
         title: 'publisher',
@@ -95,11 +95,11 @@ const metacriticDetailScrapper = async (urlObject) => {
       requestInfos.map((info) => {
         if (info.title !== 'genres') {
           try {
-            let infosFromWeb = document.querySelector(info.query).innerText.replace('\n','').replace('\n', '');
+            let infosFromWeb = document.querySelector(info.query).innerText.replace('\n','').replace('\n', '').replace(';','.');
             console.log(`puxou a info${info.title}`)
             queriesResults.push(infosFromWeb)
-          } catch (err) {
-            console.log(err);
+          } catch  {
+            queriesResults.push('null')
           }
         } else {
           try {
