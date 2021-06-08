@@ -29,4 +29,4 @@ update metacritic_data as m1, metacritic_data as m2
 set m1.release_date = str_to_date(concat(trim(substring(m2.release_date,1,4)),',',
 trim(substring(m2.release_date,5,11))),'%M,%d,%Y');
 
-select * from metacritic_data;
+select * from metacritic_data where id = 1475;
