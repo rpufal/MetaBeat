@@ -5,7 +5,7 @@
 This is a project for everyone whose first questions when choosing a new game to play are: 
 - "How is this title evaluated by the critics and the community?";
 - "How much time will it take to complete? Will it be worth it?";
--" Are there other games like this one that are better?";
+- "Are there other games like this one that are better?";
 
 Although these questions could be answered elsewhere, they usually aren't aggregated in a single place!
 
