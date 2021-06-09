@@ -22,12 +22,10 @@ Moreover, MySQL was employed for primary data treatment and database modelling.
 
 ## Implement yourself
 
-If you're curious ~~and i didn't finish the project yet~~  you may download a mysql dump file and reconstruct the database with the following steps:
-Download the metacritic_dump_file.sql
+If you're curious ~~and i didn't finish the project yet~~  you may download a json file and reconstruct the database with the following steps:
+Download the metacriticImportMongo.json file ( as well as mongodb)
 
-    sudo apt update
-    sudo apt install mysql-server
-    mysqldump -u [user] -p [database_name] < [path/to/metacritic_dump_file.sql]
+    mongoimport --db=Metacritic --collection=games --file=metacriticImportMongo.json --jsonArray
     
 
 
