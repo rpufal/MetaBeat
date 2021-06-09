@@ -42,7 +42,7 @@ prepareColection = () => {
     collection["games"].push(documentBasis);
   })
   console.log(collection["games"].length);
-  fs.writeFileSync(`./testeJson.json`, JSON.stringify(collection), 'utf-8');
+  fs.writeFileSync(`./metacriticFull.json`, JSON.stringify(collection), 'utf-8');
   // fs.writeFileSync('./metacriticImport.js', JSON.stringify(collection['game']), 'utf-8');
 }
 
