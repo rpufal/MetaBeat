@@ -15,7 +15,7 @@ const getFiles = () => {
   const filesList = consoles.map((console) => {
     const array = [];
     // pegar o numero de arquivos de uma pasta e fazer o loop em cima desse numero
-    for (let index = 0; index < 1; index++) {
+    for (let index = 0; index < 3; index++) {
       array.push(`${desiredPath}${console}/${console}-${index}-names.csv`)
     };
     return array;

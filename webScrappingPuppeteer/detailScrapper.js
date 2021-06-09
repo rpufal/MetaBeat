@@ -65,7 +65,7 @@ const metacriticDetailScrapper = async (urlObject) => {
       },
       {
         title: 'platform',
-        query: 'span.platform a'
+        query: 'span.platform'
       },
       {
         title: 'publisher',
@@ -95,11 +95,11 @@ const metacriticDetailScrapper = async (urlObject) => {
       requestInfos.map((info) => {
         if (info.title !== 'genres') {
           try {
-            let infosFromWeb = document.querySelector(info.query).innerText.replace('\n','+');
+            let infosFromWeb = document.querySelector(info.query).innerText.replace('\n','').replace('\n', '').replace(';','.');
             console.log(`puxou a info${info.title}`)
             queriesResults.push(infosFromWeb)
-          } catch (err) {
-            console.log(err);
+          } catch  {
+            queriesResults.push('null')
           }
         } else {
           try {
@@ -118,7 +118,7 @@ const metacriticDetailScrapper = async (urlObject) => {
     table.push(result);
   }
   const finalTable = tableFromArray(table);
-  fs.writeFileSync(`./tables_details/${consoleName}-${pageNumber}-details.csv`, finalTable, 'utf-8');
+  fs.writeFileSync(`./metaDetails/${consoleName}-${pageNumber}-details.csv`, finalTable, 'utf-8');
   await browser.close();  
 };
 
